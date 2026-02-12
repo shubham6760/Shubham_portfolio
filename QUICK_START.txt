@@ -1,0 +1,180 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                 SHUBHAM RAJ - AI ENGINEER PORTFOLIO                        ║
+║                           QUICK START GUIDE                                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📍 LOCATION: /Users/shubhamraj/Documents/potfolio/
+
+🎯 WHAT YOU HAVE:
+✅ Professional React-based portfolio (cloned from Soumya's with your customizations)
+✅ All content personalized with your AI Engineer information
+✅ Fully responsive design (mobile, tablet, desktop)
+✅ 3D animations and interactive elements
+✅ Easy to customize and deploy
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 GET STARTED IN 3 STEPS:
+
+Step 1: Install Node.js
+   → Visit: https://nodejs.org/ (download LTS version)
+   → Install and verify: node --version
+
+Step 2: Install Dependencies
+   → Open terminal and run:
+   cd /Users/shubhamraj/Documents/potfolio
+   npm install
+
+Step 3: Run Development Server
+   → Run:
+   npm run dev
+   
+   → Open your browser to: http://localhost:5173
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 YOUR PERSONALIZED CONTENT:
+
+Name: Shubham Raj
+Title: AI Engineer | LLMOps Specialist | ML Operations
+Email: sr6760.sr@gmail.com
+Phone: +91 9661 188 989
+Location: Pune, MH 411011, India
+
+Work Experience:
+• Senior AI Engineer @ Trulogik (06/2024 - Current)
+• Data Scientist @ Hyster-Yale Group (07/2023 - 06/2024)
+• Data Science Intern @ iNeuron.ai (11/2022 - 07/2023)
+
+Education:
+• M.Tech in AI - SIT (06/2024)
+• B.Tech in IT - SIT (01/2022)
+
+Featured Projects:
+1. Multimodal Data Extraction Agent
+2. Appeal Agent Automation
+3. EHR & EDI Automation Pipeline
+4. Claim Similarity & Modification Scoring
+5. Multi-Agent RAG Framework
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📂 KEY FILES TO CUSTOMIZE:
+
+Content Changes:
+• src/constants/index.js → All portfolio data (projects, experience, skills)
+• src/components/Hero.jsx → Title and greeting
+• src/components/About.jsx → About section text
+• src/components/Contact.jsx → Contact information & social links
+
+Styling:
+• tailwind.config.cjs → Colors and theme
+• src/index.css → Global styles
+
+Assets:
+• public/favicon.ico → Favicon
+• src/assets/ → Project images and icons
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔧 COMMON COMMANDS:
+
+Development:
+   npm run dev              # Start development server
+   npm run build            # Create production build
+   npm run preview          # Preview production build locally
+
+Deployment:
+   npm run deploy           # Deploy to GitHub Pages
+   git add .               # Stage changes
+   git commit -m "msg"     # Commit changes
+   git push origin main    # Push to GitHub
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚙️ IMPORTANT CUSTOMIZATIONS NEEDED:
+
+1. GitHub URL
+   → File: src/components/Contact.jsx (line ~68)
+   → Change: href="https://github.com"
+   → To: href="https://github.com/your-username"
+
+2. LinkedIn URL
+   → File: src/components/Contact.jsx (line ~81)
+   → Change: href="https://www.linkedin.com/in/"
+   → To: href="https://www.linkedin.com/in/your-linkedin-handle"
+
+3. Project Images
+   → Add your project images to: src/assets/
+   → Update references in: src/constants/index.js
+
+4. Project Links
+   → Update github links in: src/constants/index.js
+   → Change source_code_link to your actual repos
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📚 FULL DOCUMENTATION:
+
+Read the detailed guides:
+• README.md → Setup and deployment instructions
+• SETUP_GUIDE.md → Comprehensive customization guide
+• CUSTOMIZATION_CHECKLIST.md → Step-by-step checklist
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎨 TECH STACK:
+
+Frontend: React.js + Vite
+Styling: Tailwind CSS
+Animations: Framer Motion
+3D: Three.js
+Build: Vite
+Hosting: GitHub Pages
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✨ FEATURES INCLUDED:
+
+✅ Hero section with 3D animation
+✅ About section with service cards
+✅ Work experience timeline
+✅ Skills showcase with categories
+✅ Projects gallery with descriptions
+✅ Contact section with social links
+✅ Fully responsive design
+✅ Smooth scrolling and animations
+✅ SEO optimized
+✅ Mobile-friendly
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 DEPLOY TO GITHUB PAGES:
+
+1. Create/update repository on GitHub
+2. Update package.json with your repo
+3. Run: npm run build && npm run deploy
+4. Go to GitHub Settings → Pages → Select gh-pages branch
+5. Your portfolio will be live at: https://your-username.github.io/
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 TIPS:
+
+• Use Ctrl+Shift+I (or Cmd+Shift+I on Mac) to open DevTools
+• Use mobile view to test responsive design
+• Hot reload works automatically when you save files
+• Run "npm install" if you encounter missing dependencies
+• Clear browser cache (Ctrl+Shift+Delete) if styles don't update
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎉 YOU'RE ALL SET!
+
+Your professional AI Engineer portfolio is ready to showcase your expertise.
+
+Next: Install Node.js → npm install → npm run dev → Start customizing!
+
+For detailed help, read SETUP_GUIDE.md
+
+═══════════════════════════════════════════════════════════════════════════════
