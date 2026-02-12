@@ -24,7 +24,7 @@ const Hero = () => {
           >
             <div className='w-[200px] h-[200px] rounded-[20px] overflow-hidden shadow-lg green-pink-gradient p-[2px]'>
               <img
-                src='/Profile picture maker project.png'
+                src='/profile-shubham.png'
                 alt='Shubham Raj'
                 className='w-full h-full object-cover rounded-[18px]'
               />
