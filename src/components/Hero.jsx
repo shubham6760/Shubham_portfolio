@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import profileImage from "../assets/profile-shubham.png";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
           >
             <div className='w-[200px] h-[200px] rounded-[20px] overflow-hidden shadow-lg green-pink-gradient p-[2px]'>
               <img
-                src='/profile-shubham.png'
+                src={profileImage}
                 alt='Shubham Raj'
                 className='w-full h-full object-cover rounded-[18px]'
               />
