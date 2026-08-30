@@ -3,65 +3,45 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
-import { links } from "../assets";
-
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { projects2 } from "../constants";
+import { projects, certifications } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, summary, tags, outcome, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.08, 0.7)}>
       <Tilt
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-        tiltMaxAngleX={45}
-        tiltMaxAngleY={45}
-        scale={1}
+        className='bg-slate-900/70 p-5 rounded-3xl w-full border border-slate-700 shadow-[0_18px_48px_rgba(15,23,42,0.55)]'
+        tiltMaxAngleX={12}
+        tiltMaxAngleY={12}
+        scale={1.01}
         transitionSpeed={450}
         perspective={1000}
         glareEnable={false}
       >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={links}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+        <div className='flex h-full flex-col'>
+          <div className='flex items-center justify-between gap-3'>
+            <h3 className='text-white font-bold text-[22px] leading-7'>{name}</h3>
+            {source_code_link ? (
+              <a href={source_code_link} target='_blank' rel='noreferrer' className='text-violet-300 text-xs uppercase tracking-[0.16em]'>Case Study</a>
+            ) : (
+              <span className='text-slate-400 text-xs uppercase tracking-[0.16em]'>Professional Project</span>
+            )}
           </div>
-        </div>
 
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
+          <p className='mt-4 text-slate-300 text-[15px] leading-7'>{summary}</p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
+          <div className='mt-5 flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <span key={`${name}-${tag}`} className='rounded-full border border-slate-600 bg-slate-800/80 px-2.5 py-1 text-[12px] text-violet-100'>
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div className='mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200'>
+            {outcome}
+          </div>
         </div>
       </Tilt>
     </motion.div>
@@ -71,83 +51,34 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-    
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText}`}>Selected AI work</p>
+        <h2 className={`${styles.sectionHeadText}`}>Selected AI engineering work.</h2>
+        <p className='mt-4 max-w-3xl text-slate-300 text-[17px] leading-8'>
+          I build and deploy AI systems that reduce manual work, improve decision quality, and scale complex operational workflows with a focus on reliability and production use.
+        </p>
       </motion.div>
 
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </motion.p>
-      </div>
-
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className='mt-10 grid gap-6 lg:grid-cols-2 xl:grid-cols-3'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-            <div className="mt-20 flex flex-wrap gap-7">
-        {projects2.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
-      <br/><br/><br/><br/>
-            <h2 className={`${styles.sectionHeadText} text-center`}>
-        Certifications
-      </h2>
-      <br /><br/><br/>
 
-      <div className="flex flex-wrap justify-center gap-6 text-white text-[16px] items-center">
-        {/* AZURE */}
-        <a
-          href="https://www.credly.com/badges/dab1b268-470f-4b1e-80a8-b99d1b2a1cc5/linked_in_profile"
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-col items-center bg-[#151030] px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:bg-[#1f1843] w-[300px] text-center"
-        >
-          <div className="flex items-center justify-center mb-1">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original-wordmark.svg"
-              alt="Azure Logo"
-              className="w-9 h-9 mr-3 brightness-[350%] invert-[90%]"
-            />
-            <span>Microsoft Azure Fundamentals (AZ-900)</span>
-          </div>
-          <p className="text-[13px] text-gray-400">Cert ID: I307 - 1829</p>
-        </a>
-
-        {/* GCP */}
-        <a
-          href="https://drive.google.com/file/d/1YU_Xj_dnnAdd5NETR7_pDkED2YNHxw0m/view?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-col items-center bg-[#151030] px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:bg-[#1f1843] w-[300px] text-center"
-        >
-          <div className="flex items-center justify-center mb-1">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-              alt="GCP Logo"
-              className="w-9 h-9 mr-3 brightness-[350%] invert-[90%]"
-            />
-            <span>Google Cloud Certified Associate Cloud Engineer</span>
-          </div>
-          <p className="text-[13px] text-gray-400">Cert ID: |fEK0g</p>
-        </a>
-
-       
-      
+      <div className='mt-24'>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Certifications</h2>
+        <div className='mt-10 flex flex-wrap justify-center gap-4'>
+          {certifications.map((cert) => (
+            <div key={cert.name} className='rounded-2xl border border-slate-700 bg-slate-900/60 px-6 py-4 text-center min-w-[240px]'>
+              <div className='text-white font-semibold'>{cert.name}</div>
+              <div className='mt-2 text-sm text-slate-400'>{cert.issuer}</div>
+              <div className='mt-1 text-xs uppercase tracking-[0.14em] text-violet-200'>{cert.date}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "project");
+export default SectionWrapper(Works, "projects");
