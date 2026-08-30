@@ -6,7 +6,7 @@ import profileImage from "../assets/profile-shubham.png";
 
 const Hero = () => {
   return (
-    <section className='relative w-full min-h-screen mx-auto pt-28 pb-16'>
+    <section className='relative w-full mx-auto pt-28 pb-8 lg:pb-10'>
       <div className={`max-w-7xl mx-auto ${styles.paddingX} relative z-10`}>
         <div className='flex flex-col lg:flex-row gap-10 lg:gap-16 items-center lg:items-center'>
           <motion.div
@@ -80,9 +80,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <div className='relative w-full h-[300px] sm:h-[360px] lg:h-[460px] -mt-4 sm:-mt-6 lg:-mt-8'>
+        <ComputersCanvas />
+      </div>
 
-      <div className='absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center'>
+      <div className='absolute bottom-4 w-full flex justify-center items-center'>
         <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-slate-500/80 flex justify-center items-start p-2'>
             <motion.div
